@@ -9,12 +9,14 @@
 
     <link rel="stylesheet" href="responsive-web.css">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://use.fontawesome.com/75bee52499.js"></script> -->
 </head>
 
 <body>
     <header>
         <a href="" class="logo"><span>한눈</span>경매</a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
         <ul class="navigation">
             <li><a href="#location">지역별</a></li>
             <li><a href="#date">날짜별</a></li>
@@ -28,8 +30,7 @@
         <section class="banner" id="banner">
             <div class="content">
                 <h2>한눈에 보이는 경매</h2>
-                <p>복잡한 경매 정보보다는 정말 보고 싶은 정보부터 한눈에. 여긴 어떤 물건이? 이 물건은 가격이 얼마지? 경매 공판일은 언제지? 한눈 경매는 수많은 경매 물건들 중 나에게 정말 필요한, 내가
-                    경매하고 싶어하는 물건을 쉽고 빠르게 찾는 서비스를 제공하고 있습니다. 오늘 등록된 물건, 인기있는 지역의 물건, 경매기일이 임박한 물건부터 살펴볼까요?
+                <p>보고 싶은 물건부터 한눈에. 여긴 어떤 물건이? 경매 기일은 언제? 이 물건은 몇 번 유찰 된거지? 한눈 경매는 수많은 경매 물건 정보 중 나에게 꼭 필요한 정보만 빠르게 제공합니다. 각 항목은 사용자 별도의 세부적인 설정 없이 지역, 날짜, 가격별 경매 물건을 한눈에 빠르게 둘러보세요. 한눈경매에서 한눈에 물건을 신속히 살펴보고 물건을 관심 가지세요. 그 관심이 권리 분석으로, 임장으로, 그리고 입찰로 나아가는 크나큰 첫 걸음일 것입니다.   
                 </p>
                 <a href="#" class="btn">한눈에 보기</a>
             </div>
@@ -167,7 +168,7 @@
                     <img src="" alt="">
                 </div> -->
                 <div class="text">
-                    <h3>1 검색</h3>
+                    <h3><span>1</span> 검색</h3>
                     <p>원하는 종류의 물건 검색</p>
                 </div>
             </div>
@@ -176,7 +177,7 @@
                     <img src="" alt="">
                 </div> -->
                 <div class="text">
-                    <h3>2 분석</h3>
+                    <h3><span>2</span>분석</h3>
                     <p>물건의 등기 조회, 권리 관계 파악</p>
                 </div>
             </div>
@@ -185,8 +186,26 @@
                     <img src="" alt="">
                 </div> -->
                 <div class="text">
-                    <h3>3 임장</h3>
+                    <h3><span>3</span>임장</h3>
                     <p>물건의 입지와 점유 상황 파악</p>
+                </div>
+            </div>
+            <div class="box">
+                <!-- <div class="imgBx">
+                    <img src="" alt="">
+                </div> -->
+                <div class="text">
+                    <h3><span>4</span>입찰</h3>
+                    <p>법원에서 입찰, 낙찰과 잔금 납부</p>
+                </div>
+            </div>
+            <div class="box">
+                <!-- <div class="imgBx">
+                    <img src="" alt="">
+                </div> -->
+                <div class="text">
+                    <h3><span>5</span>명도</h3>
+                    <p>낙찰받은 물건을 실소유</p>
                 </div>
             </div>
     </section>
@@ -197,7 +216,7 @@
                 <p>게시된 물건의 신규 정보 업데이트 요청 및 오류 수정 문의</p>
             </div>
             <div class="contactForm">
-                <h3>요청서 보내기</h3>
+                <h3>문의 작성</h3>
                 <div class="inputBox">
                     <input type="text" placeholder="이름">
                 </div>
@@ -214,14 +233,22 @@
         </section>     
     </div>
     <div class="copyright">
-        <p>Copyright© 2022 by <a href="#">aglanceauction</a>[a-glance-auction]. All rights reserved.</p>
+        <p>Copyright© 2022 by <a href="#">aglanceauction</a>[a glance auction]. All rights reserved.</p>
     </div>
     <script>
         window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
         })
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            menuToggle.classList.toggle('active');
+            const navigation = document.querySelector('.navigation');
+            navigation.classList.toggle('active');
+        }
     </script>
+
 </body>
 
 </html>

@@ -130,8 +130,6 @@ section {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* justify-content: space-around; */
-
 }
 
 .row .col50 {
@@ -139,12 +137,7 @@ section {
     width: 48%;
     /* border: 1px dashed red; */
 }
-.row .col50 ul {
-    margin: 20px;
-}
-.row .col50 ul li {
-margin-top: 10px;
-}
+
 .titleText {
     color: #111;
     font-size: 2em;
@@ -157,6 +150,9 @@ margin-top: 10px;
     font-size: 1.5em;
 }
 
+.row .col50 ul {
+    margin: 20px;
+}
 
 .row .col50 .imgBx {
     position: relative;
@@ -171,7 +167,7 @@ margin-top: 10px;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .title {
@@ -415,55 +411,9 @@ margin-top: 50px;
         font-weight: 400;
     }
     .banner .content p {
-        font-size: 1em;
+        font-size: 3vmin;
     }
     section {
         padding: 20px;
-    }
-    .row {
-        flex-direction: column;
-    }
-    .row .col50 {
-        position: relative;
-        width: 100%;
-    }
-    .titleText {
-        color: #111;
-        font-size: 2em;
-        font-weight: 300;
-    }
-    .titleText span {
-        color: #ff0157;
-        font-weight: 400;
-        font-size: 1.5em;
-    }
-    .row .col50 ul li {
-        font-size: 1em;
-    }
-    .row .col50 .imgBx {
-        margin: 20px 0;
-        height: 300px;
-    }
-    .row .col50 .imgBx img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-    .date .content {
-        margin-top: 20px;
-    }
-    .date .content .box {
-        width: 150px;
-        margin: 10px;
-        border: 10px solid #fff;
-     }
-    .date .content .box .imgBx {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        /* border: 1px dashed blue; */
     }
 }
