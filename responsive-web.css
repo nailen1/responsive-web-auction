@@ -71,7 +71,7 @@ header {
     left: 0;
     width: 100%;
     padding: 40px 100px;
-    z-index: 10000;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,6 +84,7 @@ header.sticky {
     background: #fff;
     padding: 10px 100px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    z-index: 998;
 }
 
 header .logo {
@@ -172,6 +173,7 @@ section {
     position: relative;
     width: 100%;
     min-height: 400px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
     /* border: 1px dashed coral; */
 }
 
@@ -299,6 +301,7 @@ section {
     height: 100%;
     object-fit: cover;
 }
+
 .category .content .box .text {
     padding: 15px 0 5px;
 }
@@ -307,6 +310,7 @@ section {
     font-weight: 400;
     color: #58595b;
 }
+
 .protocol .content {
     display: flex;
     justify-content: center;
@@ -316,10 +320,12 @@ section {
     gap: 40px;
     /* align-items: center; */
 }
+
 .protocol .content .box {
     width: 100%;
     /* border: 1px dashed red; */
 }
+
 .protocol .content .text {
     display: flex;
 }
@@ -334,10 +340,12 @@ section {
     width: 20%;
     background: #ff0157;
 }
+
 .protocol .content .text h3 span {
     margin-right: 20px;
     /* border: 1px dashed blue; */
 }
+
 .protocol .content .text p {
     font-weight: 200;
     font-size: 1.5em;
@@ -346,6 +354,7 @@ section {
     border-bottom: 1px solid #58595b;
     width: 50%;
 }
+
 .contact {
     background: url(seoul-vector-dimmed.svg);
     background-size: cover;
@@ -353,6 +362,7 @@ section {
     background-repeat: no-repeat;
     /* border: 1px red dashed; */
 }
+
 .contactForm {
     padding: 75px 50px;
     background: #fff;
@@ -360,17 +370,20 @@ section {
     max-width: 500px;
     margin-top: 50px;
 }
+
 .contactForm h3 {
     color: #58595b;
     font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 400;
 }
+
 .contactForm .inputBox {
     position: relative;
     width: 100%;
     margin-bottom: 20px;
 }
+
 .contactForm .inputBox textarea,
 .contactForm .inputBox input {
     width: 100%;
@@ -381,6 +394,7 @@ section {
     font-size: 16px;
     resize: none;
 }
+
 .contactForm .inputBox input[type="submit"] {
     font-size: 1em;
     color: #fff;
@@ -393,15 +407,18 @@ section {
     border: none;
     cursor: pointer;
 }
+
 .copyright {
     padding: 8px 40px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     background: #ff0157;
     /* text-align: center; */
 }
+
 .copyright p {
     color: #fff;
 }
+
 .copyright a {
     color: #58595b;
     text-decoration: none;
@@ -415,21 +432,37 @@ section {
     }
 
     header .navigation {
-        display: none;
-    }
-
-    header .navigation.active {
         width: 50vw;
         height: 100vh;
         position: fixed;
         top: 0px;
-        right: 0;
+        right: -50vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         background-color: #fff;
-        box-shadow: -50vw 0px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        /* box-shadow: -50vw 0px rgba(0, 0, 0, 0.2); */
+    }
+    /* header .navigation.active:before {
+        content: '';
+        width: 50vw;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        right: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background-color: #58595b;
+        opacity: 0.2;
+    } */
+
+    header .navigation.active {
+        transform: translateX(-50vw);
+        transition: 0.5s;
     }
 
     header .navigation.active li {
@@ -454,15 +487,29 @@ section {
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
-        z-index: 100;
+        z-index: 1001;
     }
-
     .menuToggle.active {
         background: url(icon-x.svg);
         background-repeat: no-repeat;
         background-position: center;
+        z-index: 1001;
     }
-
+    .screenToggle {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #58595b;
+        opacity: 0.5;
+        /* z-index: 999; */
+    }
+    .screenToggle.active {
+        display: inherit;
+        /* z-index: 1000; */
+    }
     .banner .content h2 {
         font-size: 10vmin;
         font-weight: 400;
@@ -556,19 +603,23 @@ section {
         width: 100%;
         height: 20vh;
     }
+
     .category .content .box .text {
         padding: 5px 0;
     }
+
     .category .content .box .text h3 {
         font-weight: 400;
         font-size: 1em;
         color: #58595b;
     }
+
     .protocol .content {
         gap: 20px;
         margin: 30px 0;
         /* align-items: center; */
     }
+
     .protocol .content .text h3 {
         font-size: 1em;
         /* text-align: left; */
@@ -577,16 +628,19 @@ section {
         width: 20%;
         background: #ff0157;
     }
+
     .protocol .content .text h3 span {
         margin-right: 10px;
         /* border: 1px dashed blue; */
     }
+
     .protocol .content .text p {
         font-size: 1em;
         margin-left: 10px;
         margin-top: 0px;
         width: 70%;
     }
+
     .contactForm {
         padding: 25px;
         background: #fff;
@@ -594,6 +648,7 @@ section {
         max-width: 500px;
         margin-top: 50px;
     }
+
     .copyright {
         padding: 4px 20px;
         font-size: 0.5em;

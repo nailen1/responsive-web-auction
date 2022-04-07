@@ -9,7 +9,9 @@
 
     <link rel="stylesheet" href="responsive-web.css">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <script src="https://use.fontawesome.com/75bee52499.js"></script> -->
 </head>
 
@@ -26,17 +28,20 @@
             <li><a href="#contact">문의하기</a></li>
         </ul>
     </header>
+
     <div class="back-gradient">
         <section class="banner" id="banner">
             <div class="content">
                 <h2>한눈에 보이는 경매</h2>
-                <p>보고 싶은 물건부터 한눈에. 여긴 어떤 물건이? 경매 기일은 언제? 이 물건은 몇 번 유찰 된거지? 한눈 경매는 수많은 경매 정보 중 나에게 꼭 필요한 정보만 빠르게 제공합니다. 각 메뉴는 별도의 세부적인 설정 없이 지역, 날짜, 가격별 경매 물건을 한눈에 파악할 수 있게 구성되어 있습니다. 한눈경매에서 한눈에 빠르게 물건에 관심을 가지셨다면 그 관심이 권리 분석으로, 임장으로, 그리고 입찰로 나아가는 첫 걸음일 것입니다.   
+                <p>보고 싶은 물건부터 한눈에. 여긴 어떤 물건이? 경매 기일은 언제? 이 물건은 몇 번 유찰 된거지? 한눈 경매는 수많은 경매 정보 중 나에게 꼭 필요한 정보만 빠르게 제공합니다. 각
+                    메뉴는 별도의 세부적인 설정 없이 지역, 날짜, 가격별 경매 물건을 한눈에 파악할 수 있게 구성되어 있습니다. 한눈경매에서 한눈에 빠르게 물건에 관심을 가지셨다면 그 관심이 권리
+                    분석으로, 임장으로, 그리고 입찰로 나아가는 첫 걸음일 것입니다.
                 </p>
                 <a href="#" class="btn">한눈에 보기</a>
             </div>
         </section>
     </div>
-    
+
     <section class="location" id="location">
         <div class="row">
             <div class="col50">
@@ -175,8 +180,8 @@
         <div class="content">
             <div class="box">
                 <!-- <div class="imgBx">
-                    <img src="" alt="">
-                </div> -->
+                        <img src="" alt="">
+                    </div> -->
                 <div class="text">
                     <h3><span>1</span> 검색</h3>
                     <p>원하는 종류의 물건 검색</p>
@@ -184,8 +189,8 @@
             </div>
             <div class="box">
                 <!-- <div class="imgBx">
-                    <img src="" alt="">
-                </div> -->
+                        <img src="" alt="">
+                    </div> -->
                 <div class="text">
                     <h3><span>2</span>분석</h3>
                     <p>물건의 등기 조회, 권리 관계 파악</p>
@@ -193,8 +198,8 @@
             </div>
             <div class="box">
                 <!-- <div class="imgBx">
-                    <img src="" alt="">
-                </div> -->
+                        <img src="" alt="">
+                    </div> -->
                 <div class="text">
                     <h3><span>3</span>임장</h3>
                     <p>물건의 입지와 점유 상황 파악</p>
@@ -202,8 +207,8 @@
             </div>
             <div class="box">
                 <!-- <div class="imgBx">
-                    <img src="" alt="">
-                </div> -->
+                        <img src="" alt="">
+                    </div> -->
                 <div class="text">
                     <h3><span>4</span>입찰</h3>
                     <p>법원에서 입찰, 낙찰과 잔금 납부</p>
@@ -211,8 +216,8 @@
             </div>
             <div class="box">
                 <!-- <div class="imgBx">
-                    <img src="" alt="">
-                </div> -->
+                        <img src="" alt="">
+                    </div> -->
                 <div class="text">
                     <h3><span>5</span>명도</h3>
                     <p>낙찰받은 물건을 실소유</p>
@@ -240,22 +245,27 @@
                     <input type="submit" value="보내기">
                 </div>
             </div>
-        </section>     
+        </section>
     </div>
     <div class="copyright">
         <p>Copyright© 2022 by <a href="#">aglanceauction</a>[a glance auction]. All rights reserved.</p>
     </div>
+    <div class="screenToggle" onclick="toggleMenu();"></div>
+
     <script>
         window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
         })
 
-        function toggleMenu(){
+        function toggleMenu() {
             const menuToggle = document.querySelector('.menuToggle');
-            menuToggle.classList.toggle('active');
+            const screenToggle = document.querySelector('.screenToggle');
             const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
             navigation.classList.toggle('active');
+            screenToggle.classList.toggle('active');
+
         }
     </script>
 
